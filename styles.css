@@ -3,14 +3,64 @@ font-family: "Fjalla One";
 src: url("./Fjalla_One/FjallaOne-Regular.ttf") format("truetype"); 
 }
 
+/* Base Styling */
 html {
     font-family: "Fjalla One", Arial;
     font-weight: 200;
-    background: linear-gradient(180deg, teal, pink);
+    background: linear-gradient(130deg, rgb(0, 87, 90), rgb(240, 0, 168));
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 body {
 }
+
+/* Index Page Styling */
+
+#navbar_logo {
+    float: left;
+    text-decoration: none;
+    padding: 0 0 0 30px;
+}
+.navbar_link {
+    text-decoration: none;
+}
+.navbar_menu {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0 30px 0 0;
+    font-size: 1.3rem;
+    position: sticky;
+    z-index: 1;
+}
+
+/* Not Working for some reason */
+.navbar {
+    background: rgb(27, 27, 27);
+    /* box-shadow: 0 3px 5px rgb(252, 0, 147); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 30px 0 0;
+    font-size: 1.3rem;
+    position: sticky;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contact Page Styling */
 #contact {
@@ -20,13 +70,10 @@ body {
     border-radius: 13px;
     max-width: 666px;
     margin: 66px auto;
+    padding: 20px 0 0 0;
     position: relative;
 
 }
-h1_contact {
-    padding: 20px 0px 0px 0px;
-}
-
 .underline {
     border-bottom: solid 2px black;
     margin: .5rem auto;
@@ -68,6 +115,8 @@ form {
 #contact_button:hover {
     background: pink;
     color: teal;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff00aa;
+    transform: translateY(-0.25em);
 }
 
 input[type='text'], [type='email'], select, textarea {
