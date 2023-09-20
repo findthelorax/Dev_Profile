@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    margin: 0;
 }
 
 /* Index Page Styling */
@@ -37,7 +38,7 @@ body {
     z-index: 1;
 }
 
-/* Not Working for some reason */
+/*! Not Working for some reason */
 .navbar {
     background: rgb(27, 27, 27);
     /* box-shadow: 0 3px 5px rgb(252, 0, 147); */
@@ -147,4 +148,102 @@ textarea {
 	resize: none;
     width: 85%;
     color: black;
+}
+
+/* Footer Social Media Styling */
+
+.footer_social_icons {
+    float: right;
+    margin: 0 30px 20px 0;
+}
+.social_header {
+    margin-left: 50px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: #474544;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #ff00aa,
+        0 0 21px #ff00aa,
+        0 0 42px #0fa;
+}
+.social_icons {
+    list-style: none;
+    padding: 0;
+}
+
+/*! I founds this on w3schools but don't fully understand why refrencing 'li' or 'a' makes it able to format horizontally. Without it I could not get it to work, but I thought I should be able to with the .social_icons class. */
+
+.social_icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social_icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Icons and Hover Colors */
+.fa-square-facebook {
+    padding:10px 14px;
+    transition: .5s;
+    background-color: #2b2a29;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-square-facebook:hover {
+    background-color: #3d5b99;
+    box-shadow: 0 5px 10px #3d5b99;
+}
+.fa-square-twitter {
+    padding:10px 12px;
+    transition: .5s;
+    background-color: #2b2a29;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-square-twitter:hover {
+    background-color: #00aced;
+    box-shadow: 0 5px 10px #00aced;
+}
+.fa-youtube {
+    padding:10px 14px;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+    box-shadow: 0 5px 10px #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    transition: .5s;
+    background-color: #2b2a29;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+    box-shadow: 0 5px 10px #0073a4;
+}
+.fa-github {
+    padding:10px 14px;
+    transition: .5s;
+    background-color: #2b2a29;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-github:hover {
+    background-color: #5a32a3;
+    box-shadow: 0 5px 10px #5a32a3;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
