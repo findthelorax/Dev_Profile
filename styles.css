@@ -6,6 +6,15 @@ src: url("./Fjalla_One/FjallaOne-Regular.ttf") format("truetype");
 }
 
 /* Base Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection {
+    color: white;
+    background: rgb(240, 139, 186);
+}
 html {
     font-family: "Fjalla One", Arial;
     font-weight: 200;
@@ -15,37 +24,15 @@ html {
 }
 body {
     margin: 0;
-    letter-spacing: .13rem;
+    letter-spacing: .1rem;
 }
 
-/* Profile Picture */
-
-#profile_pic {
-    width: 150px;
-    display: block;
-    margin: auto;
-    padding: 50px 0 0 0;
-}
-
-.hello {
-    margin: auto;
-    letter-spacing: .25rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 15px 0 0 0;
-}
-.brett {
-    letter-spacing: .15rem;
-}
-.description {
-    text-align: center;
-}
 /* Index Page Styling */
 /* ! Make NavBar Sticky to page and change color. */
 #navbar_logo {
     float: left;
     text-decoration: none;
-    padding: 0 0 0 30px;
+    padding: 15px 0 15px 50px;
     font-size: 50px;
     text-shadow:
     0 0 3px #fff,
@@ -67,7 +54,6 @@ body {
         0 0 21px #ff00aa,
         0 0 42px #0fa;
 }
-
 .navbar_link:hover {
     color: white;
 }
@@ -98,92 +84,70 @@ body {
     z-index: 1;
 }
 
+/* Bio Container and Social Media Icons */
+.bio_container {
+    /* background: #ec68c0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
 
-/* Contact Page Styling */
-#contact {
-    letter-spacing: 2px;
+.bio_container_2 {
+    background: #f3508f;
+    background-image: linear-gradient(45deg, teal, #f3508f);
+    max-width: 300px;
+    height: 350px;
     text-align: center;
-    border: solid 3px pink;
-    border-radius: 13px;
-    max-width: 666px;
-    margin: 66px auto;
-    padding: 20px 0 0 0;
-    position: relative;
-
+    box-shadow: 0px 0px 18px -1px black;
+    border-radius: 25px;
+    margin: auto;
 }
-.underline {
-    border-bottom: solid 2px black;
-    margin: .5rem auto;
-    width: 120px;
+.bio_container h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 10px;
 }
-form {
-    margin: 30px 20px;
-    padding: 0;
+.bio_container h3 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
 }
-
-.name {
-    float: left;
-    width: 45%;
-    padding: 0 0 10px 0;
-}
-.email {
-    float: right;
-    width: 45%;
-    padding: 0 0 10px 0;
-}
-.subject {
-    width: 100%;
+.social_div {
+    background-color: #ec68c0;
+    background-image: linear-gradient(45deg, #f3508f, teal);
+    margin-top: 8%;
+    border-radius: 25px 25px 25px 25px;
 }
 
-#contact_button {
-    border: solid 2px pink;
-    border-radius: 13px;
-    background-color: rgb(223, 250, 250);
-    color: #474544;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Fjalla One";
-    font-size: 1em;
-    font-weight: lighter;
-    padding: 20px 35px;
-    margin: 20px 0px;
-    transition: all 0.3s;
-}
-#contact_button:hover {
-    background: pink;
-    color: teal;
-    box-shadow: 0 0.5em 0.5em -0.4em #ff00aa;
-    transform: translateY(-0.25em);
+#bio_pic {
+    width: 150px;
+    display: block;
+    margin: auto;
+    padding: 10px;
 }
 
-input[type='text'], [type='email'], select, textarea {
-    background: none;
-    border: none;
-    border-bottom: solid 2px;
-    color: black;
-    letter-spacing: 1px;
-    box-sizing: border-box;
-    transition: all 0.3s;
-    width: 100%;
+/* Profile Picture */
+#profile_pic {
+    width: 150px;
+    display: block;
+    margin: auto;
+    padding: 50px 0 0 0;
 }
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-    outline: none;
+.hello {
+    margin: auto;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0 0 0;
 }
-
-button, input, select, textarea {
-    color: #5A5A5A;
-    font: inherit;
-    margin: 0;
+#h1_bio {
+    text-align: center;
 }
-
-textarea {
-	line-height: 100%;
-    padding: 20px 0;
-	height: 100px;
-	resize: none;
-    width: 85%;
-    color: black;
+.description {
+    text-align: center;
 }
 
 /* Skills Containers Styling */
@@ -194,7 +158,7 @@ textarea {
     flex-direction: column;
     min-height: 300px;
     max-height: max-content;
-    margin: 0 30px;
+    margin: 30px;
 }
 .skills_header {
     text-align: center;
@@ -222,6 +186,90 @@ textarea {
     text-align: center;
 }
 
+/* Contact Page Styling */
+#contact {
+    letter-spacing: 2px;
+    text-align: center;
+    border: solid 3px pink;
+    border-radius: 13px;
+    max-width: 666px;
+    margin: 66px auto;
+    padding: 20px 0 0 0;
+    position: relative;
+
+}
+.underline {
+    border-bottom: solid 2px pink;
+    margin: .5rem auto;
+    width: 120px;
+}
+form {
+    margin: 30px 20px;
+    padding: 0;
+}
+
+.name {
+    float: left;
+    width: 45%;
+    padding: 0 0 20px 0;
+}
+.email {
+    float: right;
+    width: 45%;
+    padding: 0 0 20px 0;
+}
+.subject {
+    width: 100%;
+    padding: 10px 0;
+}
+
+#contact_button {
+    border: solid 2px pink;
+    border-radius: 13px;
+    background-color: rgb(223, 250, 250);
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Fjalla One";
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 20px 35px;
+    margin: 20px 0px;
+    transition: all 0.3s;
+}
+#contact_button:hover {
+    background: pink;
+    color: teal;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff00aa;
+    transform: translateY(-0.25em);
+}
+input[type='text'], [type='email'], select, textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px;
+    color: black;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    width: 100%;
+}
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+    outline: none;
+}
+button, input, select, textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+}
+textarea {
+	line-height: 100%;
+    padding: 20px 0;
+	height: 100px;
+	resize: none;
+    width: 100%;
+    color: black;
+}
+
 /* Footer Social Media Styling */
 /* TODO: Move Social Media to the top for easier access. */
 
@@ -242,7 +290,7 @@ textarea {
 }
 .social_icons {
     list-style: none;
-    padding: 0;
+    padding: 15px;
 }
 
 /*! I founds this on w3schools but don't fully understand why refrencing 'li' or 'a' makes it able to format horizontally. Without it I could not get it to work, but I thought I should be able to with the .social_icons class. */
@@ -251,6 +299,8 @@ textarea {
     vertical-align: top;
     display: inline;
     height: 100px;
+    padding-right: 5px;
+    
 }
 .social_icons a {
     color: #fff;
@@ -258,11 +308,23 @@ textarea {
 }
 
 /* Icons and Hover Colors */
+.fa-envelope {
+    padding:10px 12px;
+    transition: .5s;
+    background-color: #2b2a29;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #2b2a29;
+}
+.fa-envelope:hover {
+    background-color: #0e9c26;
+    box-shadow: 0 5px 10px #0e9c26;
+}
+
 .fa-square-facebook {
     padding:10px 14px;
     transition: .5s;
     background-color: #2b2a29;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px #2b2a29;
 }
 .fa-square-facebook:hover {
@@ -273,7 +335,7 @@ textarea {
     padding:10px 12px;
     transition: .5s;
     background-color: #2b2a29;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px #2b2a29;
 }
 .fa-square-twitter:hover {
@@ -284,7 +346,7 @@ textarea {
     padding:10px 14px;
     transition: .5s;
     background-color: #322f30;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px #2b2a29;
 }
 .fa-youtube:hover {
@@ -295,7 +357,7 @@ textarea {
     padding:10px 14px;
     transition: .5s;
     background-color: #2b2a29;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px #2b2a29;
 }
 .fa-linkedin:hover {
@@ -306,7 +368,7 @@ textarea {
     padding:10px 14px;
     transition: .5s;
     background-color: #2b2a29;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px #2b2a29;
 }
 .fa-github:hover {
