@@ -86,20 +86,30 @@ body {
 
 /* Homepage Design Styling */
 section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 5rem 8% 2rem;
 }
 #home {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
+    padding: 5rem 5rem;
 }
 .home_content h3 {
     font-size: 3rem;
     font-weight: 700;
 }
 .home_content h3:nth-of-type(2) {
-    margin-bottom: 1.2rem;
+    margin: 1.2rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: #131313;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #ff00aa,
+        0 0 21px #ff00aa,
+        0 0 42px #0fa;
 }
 .home_content h3:nth-of-type(3) {
     margin-bottom: 1.2rem;
@@ -218,7 +228,7 @@ section {
 .skills_header {
     text-align: center;
     text-transform: uppercase;
-    padding: 0 0 10px 0;
+    padding: 0 0 30px 0;
 }
 .skills_box {
     display: flex;
@@ -231,14 +241,14 @@ section {
     margin: 10px 10px;
     padding: 30px 20px;
     text-align: center;
-    border: 2px solid rgba(255, 0, 179, 0.1);
+    border: 2px solid pink;
     border-radius: 24px;
 }
 .skills_box p {
     margin: 0 auto;
     padding: 0 20px;
     width: 300px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -435,4 +445,21 @@ textarea {
     position: absolute;
     width: 100%;
     height: 2.5rem;
+}
+
+/* Top Button */
+/* ! Adjust button spacing from bottom of page */
+.top {
+    place-self:end;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    background-color: #2b2a29;
+    box-shadow: 0 5px 10px #ff00aa;
+    border-radius: 100px;
+    font-size: 20px;
+    position: sticky;
+    bottom: 20px;
+    left: 30px;
+    margin-top: 150vh;
 }
