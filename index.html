@@ -10,28 +10,75 @@
     <title>Brett's Web Dev Portfolio</title>
 </head>
 <body>
+
+    <!-- ! Move all sections to one page. -->
     <header>
         <div>
             <nav class="navbar">
-                <a href="./index.html" id="navbar_logo">Brett Logo</a>
+                <a href="./index.html" id="navbar_logo"><i class="fa-solid fa-ghost"></i></a>
                 <ul class="navbar_menu">
                     <li>
                         <a href="./index.html" class="navbar_link"> Home </a>
                     </li>
                     <li>
-                        <a href="./works.html" class="navbar_link"> Works </a>
+                        <a href="#works" class="navbar_link"> Works </a>
                     </li>
                     <li>
-                        <a href="./about.html" class="navbar_link"> About </a>
+                        <a href="#about" class="navbar_link"> About </a>
                     </li>
                     <li>
-                        <a href="./contact.html" class="navbar_link"> Contact </a>
+                        <a href="#contact" class="navbar_link"> Contact </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <!-- About Me Section -->
+    <div id="bio">
+        <p class="hello"> - Hello - </p>
+        <h1> I'm <span class="brett"> Brett </span></h1>
+        <p class="description"> I'm a Web Developer who loves diving headfirst into new problems. I love solving puzzles, cooking, snowboarding, rock climbing and hanging out with my son.</p>
+    </div>
 
+    <!-- My Works -->
+    <div id="works">
+
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact">
+        <h1>&bullet; LET'S WORK TOGETHER &bullet;</h1>
+        <div class="underline">
+        </div>
+        
+        <form id="contact_form" action="#" method="post">
+            <div class="name">
+                <label for="name"></label>
+                <input id="name_input" type="text" placeholder="MY NAME IS" name="name" required>
+            </div>
+            <div class="email">
+                <label for="email"></label>
+                <input id="email_input" type="email" placeholder="EMAIL ADDRESS" name="email" required>
+            </div>
+            <div class="subject">
+                <label for="subject"></label>
+                <input id="subject_input" type="text" placeholder="I'D LIKE TO TALK ABOUT" name="subject" required>
+            </div>
+            <div class="message">
+                <label for="message"></label>
+                <textarea id="message_input" placeholder="HI, LETS CHAT ABOUT...
+                
+                
+                RANDOM ANIMAL FACT: MEGATHERIUM WAS A 20FT TALL LAND SLOTH" name="message" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="submit">
+                <input id="contact_button" type="submit" value="SEND MESSAGE">
+            </div>
+        </form>
+    </div>
+
+    <!-- Social Media Footer Icons -->
     <footer id="footer">
         <div class="footer_social_icons">
             <h4 class="social_header">Follow Me On</h4>
