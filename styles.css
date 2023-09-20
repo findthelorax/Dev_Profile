@@ -1,3 +1,5 @@
+/* ? Maybe change coloring in the future to mellow out. */
+
 @font-face { 
 font-family: "Fjalla One";  
 src: url("./Fjalla_One/FjallaOne-Regular.ttf") format("truetype"); 
@@ -13,10 +15,33 @@ html {
 }
 body {
     margin: 0;
+    letter-spacing: .13rem;
 }
 
-/* Index Page Styling */
+/* Profile Picture */
 
+#profile_pic {
+    width: 150px;
+    display: block;
+    margin: auto;
+    padding: 50px 0 0 0;
+}
+
+.hello {
+    margin: auto;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0 0 0;
+}
+.brett {
+    letter-spacing: .15rem;
+}
+.description {
+    text-align: center;
+}
+/* Index Page Styling */
+/* ! Make NavBar Sticky to page and change color. */
 #navbar_logo {
     float: left;
     text-decoration: none;
@@ -27,13 +52,15 @@ body {
     0 0 10px #ff00aa,
     0 0 21px #ff00aa,
     0 0 42px #0fa;
-
+}
+#navbar_logo:hover {
+    color: white;
 }
 .navbar_link {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #474544;
+    color: #131313;
     text-shadow:
         0 0 3px #fff,
         0 0 10px #ff00aa,
@@ -52,13 +79,13 @@ body {
     list-style: none;
     gap: 2rem;
     padding: 0 30px 0 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     position: sticky;
     z-index: 1;
 }
 
 /*! Not Working for some reason */
-.navbar {
+#navbar {
     background: rgb(27, 27, 27);
     /* box-shadow: 0 3px 5px rgb(252, 0, 147); */
     display: flex;
@@ -70,16 +97,6 @@ body {
     position: sticky;
     z-index: 1;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* Contact Page Styling */
@@ -169,7 +186,44 @@ textarea {
     color: black;
 }
 
+/* Skills Containers Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    max-height: max-content;
+    margin: 0 30px;
+}
+.skills_header {
+    text-align: center;
+    text-transform: uppercase;
+}
+.skills_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.skills_box div {
+    min-height: 250px;
+    max-height: max-content;
+    margin: 10px 10px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 0, 179, 0.1);
+    border-radius: 24px;
+}
+.skills_box p {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 300px;
+    font-weight: 600;
+    text-align: center;
+}
+
 /* Footer Social Media Styling */
+/* TODO: Move Social Media to the top for easier access. */
 
 .footer_social_icons {
     float: right;
@@ -262,7 +316,6 @@ textarea {
 
 #footer {
     position: absolute;
-    bottom: 100px;
     width: 100%;
     height: 2.5rem;
 }
