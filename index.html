@@ -10,9 +10,11 @@
     <title>Brett's Web Dev Portfolio</title>
 </head>
 <body>
-
     <header>
-        <div>
+    </header>
+
+        <!-- NavBar -->
+        <div id="navbar_div">
             <nav id="navbar">
                 <a href="./index.html" id="navbar_logo"><i class="fa-solid fa-ghost"></i></a>
                 <ul class="navbar_menu">
@@ -20,10 +22,10 @@
                         <a href="./index.html" class="navbar_link"> Home </a>
                     </li>
                     <li>
-                        <a href="#works" class="navbar_link"> Works </a>
+                        <a href="#projects" class="navbar_link"> Projects </a>
                     </li>
                     <li>
-                        <a href="#about" class="navbar_link"> About </a>
+                        <a href="./about.html" class="navbar_link"> About </a>
                     </li>
                     <li>
                         <a href="#contact" class="navbar_link"> Contact </a>
@@ -31,7 +33,6 @@
                 </ul>
             </nav>
         </div>
-    </header>
 
     <!-- Homepage Section -->
     <section id="home">
@@ -51,54 +52,54 @@
             </div>
         </div>
         <div class="home_content">
-            <img src="./profile_pic.png" alt="Handsome Redhead">
+            <img id="profile_img" src="./profile_pic.png" alt="Handsome Redhead">
+        </div>
+
+        <div class="animation-wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
         </div>
     </section>
+<!-- ! Make Fun Section -->
+    <div class="fun">
 
-
-    <!-- My Works -->
-    <div id="works">
-        <section class="container">
-            <h1 class="skills_header"> Skills </h1>
-            <div class="skills_box">
-                <div class="box_1">
-                    <h3 class="skills_header"> Father </h3><br>
-                    <p>I just had a son in April 2023 and it's been amazing. I can't wait for him to grow up so I can teach him everything I know</p>
-                </div>
-                <div class="box_2">
-                    <h3 class="skills_header"> Development Languages </h3><br>
-                    <p>Proficient in: HTML, CSS.
-                        <br>
-                        <br>Learning: Javascript, C#, React, Node.js.
-                    </p>
-                </div>
-                <div class="box_3">
-                    <h3 class="skills_header"> Mountaineering </h3><br>
-                    <p>I spent two months in Haines, Alaska working on my Mountaineering Guide Certification.
-                        I learned glacial traversal, camp dynamics and structure, rescue scenarios and terrain management. It was an amazing experience.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="skills_box">
-                <div class="box_4">
-                    <h3 class="skills_header"> Yo-Yoing </h3><br>
-                    <p>I grew up playing with skill toys, juggling, poi, devil sticks, diablo and yo-yoing. I went on to compete in the World Yo-Yo Competition placing 13th in the World and 13th in the Nation in the same year and holding a AYYA World Record for Iron Whips.</p>
-                </div>
-                <div class="box_5">
-                    <h3 class="skills_header"> Wilderness EMT </h3><br>
-                    <p>In 2006 I got my WFR certification then went on to work Ski Patrol at Killington Resort. I now have CPR, Wilderness EMT, Outdoor Emergency Care, ATF Certification for explosive handling among others.
-                    </p>
-                </div>
-                <div class="box_6">
-                    <h3 class="skills_header"> Chef </h3><br>
-                    <p>I've been working in kitchens for 20+ years. I run a kitchen at a summer camp feeding 100 children 9-14 and 50 staff while catering to all dietary needs: Vegetarian, Gluten, Free, Dairy Free, Keto, Egg Free, Sesame Free and any others.</p>
-                </div>
-            </div>
-        </section>
     </div>
+    <!-- Skills Section -->
+    <div class="skills_header">
+        <h2>SKILLS</h2>
+    </div>
+    <div class="skills_grid">
+        <div class="skills_grid_item"><h3> Father </h3><p>I just had a son in April 2023 and it's been amazing. I can't wait for him to grow up so I can teach him everything I know.</p></div>
+        <div class="skills_grid_item"><h3> Dev Languages </h3><p>Proficient in: HTML, CSS.
+        <br>
+        <br>Learning: Javascript, C#, React, Node.js.</p></div>
+        <div class="skills_grid_item"><h3> Mountaineering </h3><p>I spent two months in Haines, Alaska working on my Mountaineering Guide Certification.
+        I learned glacial traversal, camp dynamics and structure, rescue scenarios and terrain management. It was an amazing experience.</p></div>
+        <div class="skills_grid_item"><h3> Yo-Yoing </h3><p>I grew up playing with skill toys, juggling, poi, devil sticks, diablo and yo-yoing. I went on to compete in the World Yo-Yo Competition placing 13th in the World and 13th in the Nation in the same year and holding a AYYA World Record for Iron Whips.</p></div>
+        <div class="skills_grid_item"><h3> Wilderness EMT </h3><p>In 2006 I got my WFR certification then went on to work Ski Patrol at Killington Resort. I now have CPR, Wilderness EMT, Outdoor Emergency Care, ATF Certification for explosive handling among others.</p></div>
+        <div class="skills_grid_item"><h3> Chef </h3><p>I've been working in kitchens for 20+ years. I run a kitchen at a summer camp feeding 100 children 9-14 and 50 staff while catering to all dietary needs: Vegetarian, Gluten, Free, Dairy Free, Keto, Egg Free, Sesame Free and any others.</p></div>
+    </div>
+
+    <!-- ! Projects Section -->
+    <section id="projects">
+        <div class="projects_header">
+            <h2>Projects</h2>
+            <div class="projects_grid">
+                <div class="projects_grid_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ratione quasi rerum molestiae magnam, mollitia, harum quibusdam id fugiat numquam sapiente dolor error ea! Cupiditate eveniet deserunt accusamus magni provident!</div>
+                <div class="projects_grid_item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut unde recusandae perspiciatis quae magnam repellendus, iusto corporis commodi minus delectus nisi consequatur praesentium ullam architecto hic qui et provident! Dignissimos.</div>
+                <div class="projects_grid_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eos necessitatibus quaerat ullam nesciunt, fugit optio eum aliquid mollitia impedit magnam nisi nam quas autem ipsa culpa iste architecto ab.</div>
+                <div class="projects_grid_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse, vitae rerum reiciendis voluptatem nihil pariatur quas nobis dignissimos quidem culpa deserunt. Perferendis quasi quam officiis dignissimos amet adipisci officia!</div>
+                <div class="projects_grid_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa repellendus fugiat, recusandae, sint optio debitis alias voluptate explicabo necessitatibus autem, maiores doloribus magnam perspiciatis obcaecati facere nulla expedita? Beatae!</div>
+                <div class="projects_grid_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate commodi obcaecati ut consectetur quaerat fugit saepe illum libero, provident laborum officia consequuntur earum iste nostrum delectus voluptatibus dolore? Odio, beatae?</div>
+            </div>
+        </div>
+    </section>
 
     <!-- ! Make detailed about me section. -->
 
@@ -107,7 +108,7 @@
         <h1>&bullet; LET'S WORK TOGETHER &bullet;</h1>
         <div class="underline"></div>
         
-        <form id="contact_form" action="mailto:findthelorax@gmail.com" method="post">
+        <form id="contact_form" action="#" method="post">
             <div class="name">
                 <label for="name"></label>
                 <input id="name_input" type="text" placeholder="MY NAME IS" name="name" required>
@@ -128,7 +129,7 @@
                 RANDOM ANIMAL FACT: MEGATHERIUM WAS A 20FT TALL LAND SLOTH" name="message" cols="30" rows="5" required></textarea>
             </div>
             <div class="submit">
-                <input id="contact_button" type="submit" value="SEND MESSAGE">
+                <input id="contact_button" class="glow-on" type="submit" value="SEND MESSAGE">
             </div>
         </form>
     </div>
@@ -148,6 +149,12 @@
         </div>
     </footer>
 
+    <!-- Jump to Top -->
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <footer> <p><small>&copy; Copyright <script>document.write(new Date().getFullYear())</script> Brett Ferrante</small> </p></footer>
+    </div>
 </body>
 </html>

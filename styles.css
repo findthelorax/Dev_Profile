@@ -1,4 +1,9 @@
 /* ? Maybe change coloring in the future to mellow out. */
+/* TODO: CSS Grid
+TODO: media queries
+TODO: 
+ */
+
 
 @font-face { 
 font-family: "Fjalla One";  
@@ -66,27 +71,25 @@ body {
     gap: 2rem;
     padding: 0 30px 0 0;
     font-size: 1.5rem;
-    position: sticky;
-    z-index: 1;
 }
-
+#navbar_div {
+    position: sticky;
+    top: 0;
+}
 /*! Not Working for some reason */
 #navbar {
     background: rgb(27, 27, 27);
-    /* box-shadow: 0 3px 5px rgb(252, 0, 147); */
+    box-shadow: 0 3px 5px #ff00aa, 0 3.5px 5px #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
     padding: 0 30px 0 0;
-    font-size: 1.3rem;
     position: sticky;
-    z-index: 1;
+	top: 0;
 }
 
 /* Homepage Design Styling */
 section {
-    /* min-height: 100vh; */
+    min-height: 100vh;
     padding: 5rem 8% 2rem;
 }
 #home {
@@ -129,6 +132,8 @@ section {
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
+
+/* Home Social Styling */
 .home_social a {
     display: inline-flex;
     justify-content: center;
@@ -193,7 +198,6 @@ section {
     background-color: #5a32a3;
 }
 
-
 /* Profile Picture */
 #profile_pic {
     width: 150px;
@@ -215,41 +219,58 @@ section {
     text-align: center;
 }
 
-/* Skills Containers Styling */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 300px;
+/* Skills Grid Styling*/
+.skills_grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    text-align: center;
+    /* margin to center grid */
+    margin: 20px 50px 50px 100px;
+    min-height: 666px;
     max-height: max-content;
-    margin: 30px;
 }
 .skills_header {
-    text-align: center;
     text-transform: uppercase;
-    padding: 0 0 30px 0;
-}
-.skills_box {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.skills_box div {
-    min-height: 250px;
-    max-height: max-content;
-    margin: 10px 10px;
-    padding: 30px 20px;
     text-align: center;
+    margin: 50px 0 0 0;
+}
+.skills_grid_item {
+    padding: 20px;
     border: 2px solid pink;
     border-radius: 24px;
 }
-.skills_box p {
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 300px;
-    font-weight: 500;
+.skills_grid_item h3 {
+    padding: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+/* Works Styling */
+.projects_grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
     text-align: center;
+    /* margin to center grid */
+    margin: 20px 50px 50px 100px;
+    min-height: 666px;
+    max-height: max-content;
+}
+.projects_header {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+.projects_grid_item {
+    padding: 20px;
+    border: 2px solid pink;
+    border-radius: 24px;
+}
+.projects_grid_item h3 {
+    padding: 0 0 15px 0;
+    text-transform: uppercase;
 }
 
 /* Contact Page Styling */
@@ -259,10 +280,9 @@ section {
     border: solid 3px pink;
     border-radius: 13px;
     max-width: 666px;
-    margin: 66px auto;
+    margin: 0 auto 250px auto;
     padding: 20px 0 0 0;
     position: relative;
-
 }
 .underline {
     border-bottom: solid 2px pink;
@@ -328,7 +348,6 @@ button, input, select, textarea {
     margin: 0;
 }
 textarea {
-	line-height: 100%;
     padding: 20px 0;
 	height: 100px;
 	resize: none;
@@ -337,12 +356,12 @@ textarea {
 }
 
 /* Footer Social Media Styling */
-/* TODO: Move Social Media to the top for easier access. */
 
 .footer_social_icons {
     float: right;
-    margin: 0 30px 20px 0;
 }
+
+/* ! Can't space "FOLLOW ME" from social icons without extending the entire page and creating space at the bottom. */
 .social_header {
     margin-left: 50px;
     text-transform: uppercase;
@@ -356,7 +375,7 @@ textarea {
 }
 .social_icons {
     list-style: none;
-    padding: 15px;
+    padding: 0 20px 0 15px;
 }
 
 /*! I founds this on w3schools but don't fully understand why referencing 'li' or 'a' makes it able to format horizontally. Without it I could not get it to work, but I thought I should be able to with the .social_icons class. */
@@ -444,7 +463,6 @@ textarea {
 #footer {
     position: absolute;
     width: 100%;
-    height: 2.5rem;
 }
 
 /* Top Button */
@@ -462,4 +480,106 @@ textarea {
     bottom: 20px;
     left: 30px;
     margin-top: 150vh;
+}
+.copyright {
+    width: 100%;
+    line-height: 40px;
+    font-size: 0.8em;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    bottom: 0px;
+}
+
+/* Media Queries */
+
+/* Light and Dark Mode */
+/* @media screen and (prefers-color-scheme: dark) {
+    body {
+    --bg-color: black;
+    --text-color: white;
+    }
+  } */
+
+/*
+Min-width: 320px (smaller phone viewpoints)
+Min-width: 480px (small devices and most phones)
+Min-width: 768px (most tablets)
+Min-width: 992px (smaller desktop viewpoints)
+Min-width: 1200px (large devices and wide screens)
+*/
+
+@media screen and (min-width: 480px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    body {
+    background-color: pink;
+    }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+/* Learning CSS Motion */
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: teal;
+    animation: move-the-circle 1.75s infinite;
+    transform-origin: center center;
+    left: 30px;
+    margin: 0 30%;
+}
+.circle:nth-child(1){
+    left: 60px;
+    animation-delay: .1s;
+}
+.circle:nth-child(2){
+    left: 90px;
+    animation-delay: .2s;
+}
+.circle:nth-child(3){
+    left: 120px;
+    animation-delay: .3s;
+}
+.circle:nth-child(4){
+    left: 150px;
+    animation-delay: .4s;
+}
+.circle:nth-child(5){
+    left: 180px;
+    animation-delay: .5s;
+}
+.circle:nth-child(6){
+    left: 210px;
+    animation-delay: .6s;
+}
+.circle:nth-child(7){
+    left: 240px;
+    animation-delay: .7s;
+}
+.circle:nth-child(8){
+    left: 270px;
+    animation-delay: .8s;
+}
+@keyframes move-the-circle {
+    0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: #ff00aa;
+    }
+    50% {
+    transform: translate(0, 50px) scale(.5);
+    opacity: .5;
+    background-color:blueviolet;
+    }
+    100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: teal;
+    }
 }
