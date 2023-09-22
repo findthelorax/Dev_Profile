@@ -32,21 +32,13 @@ body {
     letter-spacing: .1rem;
 }
 
-/* Index Page Styling */
-/* ! Make NavBar Sticky to page and change color. */
-#navbar_logo {
-    float: left;
-    text-decoration: none;
-    padding: 15px 0 15px 50px;
-    font-size: 50px;
-    text-shadow:
-    0 0 3px #fff,
-    0 0 10px #ff00aa,
-    0 0 21px #ff00aa,
-    0 0 42px #0fa;
-}
-#navbar_logo:hover {
-    color: white;
+/* Navbar Styling */
+#site_logo {
+    filter: invert(1);
+    scale: .4;
+    display: block;
+    margin: -75px -50px;
+    padding: 0;
 }
 .navbar_link {
     text-decoration: none;
@@ -79,7 +71,7 @@ body {
 /*! Not Working for some reason */
 #navbar {
     background: rgb(27, 27, 27);
-    box-shadow: 0 3px 5px #ff00aa, 0 3.5px 5px #fff;
+    box-shadow: 0 3px 20px #ff00aa, 0 3.5px 50px #fff;
     display: flex;
     justify-content: space-between;
     padding: 0 30px 0 0;
@@ -163,36 +155,41 @@ section {
     border: .1rem solid transparent;
 }
 .home_social_icons i:hover {
-    box-shadow: 0 5px 10px #fff;
+    box-shadow: inset 1px 2px 5px #fff, 0 2px 20px black, inset 10px 2px 20px black;
     border: .1rem solid white;
 }
 
+.hire_me {
+    flex-direction: row;
+}
+
 .home_social_icons .fa-envelope {
-    box-shadow: 0 5px 10px #0e9c26;
+    box-shadow: inset 0 5px 10px #0e9c26;
 }
 .home_social_icons .fa-envelope:hover {
     background-color: #0e9c26;
 }
 .home_social_icons .fa-facebook-f {
-    box-shadow: 0 5px 10px #3d5b99;
+    box-shadow: inset 0 5px 10px #3d5b99;
 }
 .home_social_icons .fa-facebook-f:hover {
     background-color: #3d5b99;
 }
 .home_social_icons .fa-youtube {
-    box-shadow: 0 5px 10px #e64a41;
+    box-shadow: inset 0 5px 10px #e64a41;
 }
 .home_social_icons .fa-youtube:hover {
     background-color: #e64a41;
 }
 .home_social_icons .fa-linkedin {
-    box-shadow: 0 5px 10px #0073a4;
+    box-shadow: inset 0 5px 10px #0073a4;
 }
 .home_social_icons .fa-linkedin:hover {
     background-color: #0073a4;
 }
 .home_social_icons .fa-github {
-    box-shadow: 0 5px 10px #5a32a3;
+    box-shadow: inset 0 5px 10px #5a32a3;
+
 }
 .home_social_icons .fa-github:hover {
     background-color: #5a32a3;
@@ -248,20 +245,18 @@ section {
 
 /* Works Styling */
 .projects_grid {
-    display: inline-grid;
-    grid-template-columns: repeat(3, 30%);
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
     grid-column-gap: 30px;
     grid-row-gap: 50px;
     text-align: center;
-    /* margin to center grid */
-    margin: 20px 50px 50px 100px;
     min-height: 666px;
     max-height: max-content;
 }
-.projects_header {
+.projects_header h2 {
     text-transform: uppercase;
     text-align: center;
-    margin: 50px 0 0 0;
+    margin-bottom: 50px;
 }
 .projects_grid_item {
     padding: 20px;
@@ -312,8 +307,8 @@ form {
 #contact_button {
     border: solid 2px pink;
     border-radius: 13px;
-    background-color: rgb(223, 250, 250);
-    color: #474544;
+    background-color: rgb(175, 202, 236);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     display: inline-block;
     font-family: "Fjalla One";
@@ -323,10 +318,13 @@ form {
     margin: 20px 0px;
     transition: all 0.3s;
 }
+
+/* Learn Glow Button */
+
 #contact_button:hover {
     background: pink;
     color: teal;
-    box-shadow: 0 0.5em 0.5em -0.4em #ff00aa;
+    box-shadow: 0 0.6em 0.5em -0.4em #ff00aa, 0 0.6em 0.55em -0.4em white;
     transform: translateY(-0.25em);
 }
 input[type='text'], [type='email'], select, textarea {
@@ -356,7 +354,6 @@ textarea {
 }
 
 /* Footer Social Media Styling */
-
 .footer_social_icons {
     float: right;
 }
@@ -373,23 +370,24 @@ textarea {
         0 0 21px #ff00aa,
         0 0 42px #0fa;
 }
-.social_icons {
-    list-style: none;
-    padding: 0 20px 0 15px;
-}
 
 /*! I founds this on w3schools but don't fully understand why referencing 'li' or 'a' makes it able to format horizontally. Without it I could not get it to work, but I thought I should be able to with the .social_icons class. */
 
 .social_icons li {
     vertical-align: top;
-    display: inline;
-    height: 100px;
-    padding-right: 5px;
-    
+    display: inline-block;
+    list-style: none;
 }
 .social_icons a {
     color: #fff;
     text-decoration: none;
+    margin-right: 5px;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    vertical-align: top;
+    display: inline-block;
 }
 
 /* Icons and Hover Colors */
@@ -398,66 +396,66 @@ textarea {
     transition: .5s;
     background-color: #2b2a29;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-envelope:hover {
     background-color: #0e9c26;
-    box-shadow: 0 5px 10px #0e9c26;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-facebook-f {
     padding: 10px 14px;
     transition: .5s;
     background-color: #2b2a29;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-facebook-f:hover {
     background-color: #3d5b99;
-    box-shadow: 0 5px 10px #3d5b99;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-square-twitter {
     padding: 10px 10px;
     transition: .5s;
     background-color: #2b2a29;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-square-twitter:hover {
     background-color: #00aced;
-    box-shadow: 0 5px 10px #00aced;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-youtube {
     padding: 10px 10px;
     transition: .5s;
     background-color: #322f30;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-youtube:hover {
     background-color: #e64a41;
-    box-shadow: 0 5px 10px #e64a41;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-linkedin {
     padding: 10px 10px;
     transition: .5s;
     background-color: #2b2a29;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-linkedin:hover {
     background-color: #0073a4;
-    box-shadow: 0 5px 10px #0073a4;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-github {
     padding: 10px 10px;
     transition: .5s;
     background-color: #2b2a29;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #2b2a29;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-github:hover {
     background-color: #5a32a3;
-    box-shadow: 0 5px 10px #5a32a3;
+    box-shadow: inset 0 2px 4px whitesmoke;
 }
 
 #footer {
@@ -473,7 +471,7 @@ textarea {
     padding: 10px;
     color: #fff;
     background-color: #2b2a29;
-    box-shadow: 0 5px 10px #ff00aa;
+    box-shadow: inset 0 5px 10px #ff00aa, inset 0 1px 1px white;
     border-radius: 100px;
     font-size: 20px;
     position: sticky;
@@ -481,10 +479,13 @@ textarea {
     left: 30px;
     margin-top: 150vh;
 }
+.top:hover {
+    box-shadow: inset 0 5px 10px #ff00aa, inset 0 1px 1px white, 0 5px 10px #ff00aa, 0 1px 1px white;
+}
+
 .copyright {
     width: 100%;
     line-height: 40px;
-    font-size: 0.8em;
     position: relative;
     color: #fff;
     text-align: center;
@@ -509,18 +510,22 @@ Min-width: 992px (smaller desktop viewpoints)
 Min-width: 1200px (large devices and wide screens)
 */
 
-@media screen and (min-width: 480px) {
-    
+@media screen and (max-width: 480px) {
 }
 
 @media screen and (max-width: 768px) {
     body {
-    background-color: pink;
+    background-color: rgb(137, 126, 165);
     }
 }
 
 @media screen and (max-width: 992px) {
+    .circle {
+        top: 15%;
+    }
 }
+
+
 
 /* Learning CSS Motion */
 .circle {
@@ -534,38 +539,39 @@ Min-width: 1200px (large devices and wide screens)
     left: 30px;
     margin: 0 30%;
 }
-.circle:nth-child(1){
+.circle:nth-child(1) {
     left: 60px;
     animation-delay: .1s;
 }
-.circle:nth-child(2){
+.circle:nth-child(2) {
     left: 90px;
     animation-delay: .2s;
 }
-.circle:nth-child(3){
+.circle:nth-child(3) {
     left: 120px;
     animation-delay: .3s;
 }
-.circle:nth-child(4){
+.circle:nth-child(4) {
     left: 150px;
     animation-delay: .4s;
 }
-.circle:nth-child(5){
+.circle:nth-child(5) {
     left: 180px;
     animation-delay: .5s;
 }
-.circle:nth-child(6){
+.circle:nth-child(6) {
     left: 210px;
     animation-delay: .6s;
 }
-.circle:nth-child(7){
+.circle:nth-child(7) {
     left: 240px;
     animation-delay: .7s;
 }
-.circle:nth-child(8){
+.circle:nth-child(8) {
     left: 270px;
     animation-delay: .8s;
 }
+
 @keyframes move-the-circle {
     0% {
     transform: translate(0, 0) scale(1);
@@ -583,3 +589,4 @@ Min-width: 1200px (large devices and wide screens)
     background-color: teal;
     }
 }
+
