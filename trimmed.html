@@ -177,3 +177,69 @@
         50% { background-position: 400% 0; }
         100% { background-position: 0 0; }
         }
+
+        <!-- circle motion -->
+        /* Learning CSS Motion */
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: teal;
+            animation: move-the-circle 1.75s infinite;
+            transform-origin: center center;
+            left: 30px;
+            margin: 0 40%;
+        }
+        .circle:nth-child(1) {
+            left: 60px;
+            animation-delay: .1s;
+        }
+        .circle:nth-child(2) {
+            left: 90px;
+            animation-delay: .2s;
+        }
+        .circle:nth-child(3) {
+            left: 120px;
+            animation-delay: .3s;
+        }
+        .circle:nth-child(4) {
+            left: 150px;
+            animation-delay: .4s;
+        }
+        .circle:nth-child(5) {
+            left: 180px;
+            animation-delay: .5s;
+        }
+        .circle:nth-child(6) {
+            left: 210px;
+            animation-delay: .6s;
+        }
+        .circle:nth-child(7) {
+            left: 240px;
+            animation-delay: .7s;
+        }
+        .circle:nth-child(8) {
+            left: 270px;
+            animation-delay: .8s;
+        }
+        
+        @keyframes move-the-circle {
+            0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+            background-color: #ff00aa;
+            }
+            50% {
+            transform: translate(0, 50px) scale(.5);
+            opacity: .5;
+            background-color:blueviolet;
+            }
+            100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+            background-color: teal;
+            }
+        }
+
+        
