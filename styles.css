@@ -39,9 +39,12 @@ a:any-link {
 }
 
 html {
-    font-family: "Fjalla One", Arial;
+    font-family: "SpecialElite", Arial;
     font-weight: 200;
-    background: rgb(165, 109, 167);
+    background: #131313;
+    color: white;
+    
+    /* background: rgb(165, 109, 167); */
     /* background: linear-gradient(130deg, rgb(1, 86, 88), rgb(240, 0, 168)); */
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -72,7 +75,7 @@ section {
         0 0 3px #fff,
         0 0 10px #ff00aa,
         0 0 21px #ff00aa,
-        0 0 42px rgb(251, 255, 0);
+        0 0 33px rgb(251, 255, 0);
 }
 .navbar_link:hover {
     color: white;
@@ -86,21 +89,24 @@ section {
     gap: 2rem;
     padding: 0 30px 0 0;
     font-size: 1.5rem;
+    font-family: "SpecialElite";
+    font-weight: 700;
+    color: #ffffff;
 }
 #navbar_div {
     position: sticky;
     top: 0;
+    z-index: 666; 
 }
 /*! Not Working for some reason */
 #navbar {
-    background: rgb(27, 27, 27);
-    box-shadow: 0 3px 20px #ff00aa, 0 3.5px 50px #fff;
+    background: #131313;
+    box-shadow: 0 3px 20px #ff5ac8, 0 3.5px 50px #fff;
     display: flex;
     justify-content: space-between;
     padding: 0 30px 0 0;
     position: sticky;
 	top: 0;
-    font-family: "SpecialElite";
 }
 
 /* Homepage Design Styling */
@@ -122,12 +128,12 @@ section {
     text-transform: uppercase;
     font-family: "SpecialElite";
     letter-spacing: .25rem;
-    color: #131313;
+    color: #ffffff;
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #ff00aa,
+        0 0 10px #dafeff,
+        0 0 15px #ff00aa,
         0 0 21px #ff00aa,
-        0 0 42px rgb(251, 255, 0);
+        0 0 42px rgb(208, 252, 255);
 }
 .home_content h3:nth-of-type(2) {
     margin-bottom: 2rem;
@@ -299,7 +305,7 @@ section {
 
 /* ! ABOUT SECTION */
 .about_grid {
-    border: 2px solid black;
+    border: 2px solid pink;
     display: grid;
     grid-template-columns: repeat(3, auto);
     font-family: "PressStart";
@@ -307,7 +313,6 @@ section {
     line-height: 1.2rem;
     height: 400px;
 }
-/* ! Picture is above navbar...unsure why */
 #about_pic {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -319,7 +324,7 @@ section {
 .about_grid_items img:nth-child(1) {
     background: pink;
     border: 2px solid black;
-    box-shadow: 20px 20px 20px black;
+    box-shadow: 20px 20px 20px rgb(255, 255, 255);
 }
 .yo-yo {
     width: 20%;
@@ -361,9 +366,10 @@ section {
     border: solid 3px pink;
     border-radius: 13px;
     max-width: 666px;
-    margin: 0 auto 250px auto;
+    margin: 0 auto 200px auto;
     padding: 20px 0 0 0;
     position: relative;
+    font-family: "SpecialElite";
 }
 .underline {
     border-bottom: solid 2px pink;
@@ -407,15 +413,18 @@ form {
 }
 #contact_button:hover {
     background: pink;
-    color: teal;
+    color: black;
     box-shadow: 0 0.6em 0.5em -0.4em #ff00aa, 0 0.6em 0.55em -0.4em white;
     transform: translateY(-0.25em);
 }
+#contact_button:active {
+}
+
 input[type='text'], [type='email'], select, textarea {
     background: none;
     border: none;
     border-bottom: solid 2px;
-    color: black;
+    color: #85aec0;
     letter-spacing: 1px;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -425,7 +434,7 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
     outline: none;
 }
 button, input, select, textarea {
-    color: #5A5A5A;
+    color: #85aec0;
     font: inherit;
     margin: 0;
 }
@@ -434,7 +443,7 @@ textarea {
 	height: 100px;
 	resize: none;
     width: 100%;
-    color: black;
+    color: #85aec0;
 }
 
 /* Footer Social Media Styling */
@@ -447,7 +456,6 @@ textarea {
     margin-left: 50px;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #131313;
     text-shadow:
         0 0 7px #fff,
         0 0 10px #ff00aa,
@@ -494,17 +502,6 @@ textarea {
 }
 .fa-facebook-f:hover {
     background-color: #3d5b99;
-    box-shadow: inset 0 2px 4px whitesmoke;
-}
-.fa-square-twitter {
-    padding: 10px 10px;
-    transition: .5s;
-    background-color: #2b2a29;
-    border-radius: 10px;
-    box-shadow: inset 0 2px 4px whitesmoke;
-}
-.fa-square-twitter:hover {
-    background-color: #00aced;
     box-shadow: inset 0 2px 4px whitesmoke;
 }
 .fa-youtube {
@@ -568,21 +565,24 @@ textarea {
 /* Copyright */
 .copyright {
     width: 100%;
-    line-height: 40px;
+    line-height: 50px;
     position: relative;
     color: #fff;
     text-align: center;
     bottom: 0px;
 }
-
+.c_symbol {
+    font-size: 25px;
+}
 /* Light and Dark Mode */
-/* @media screen and (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
     body {
     --bg-color: black;
     --text-color: white;
     }
-  } */
+}
 
+/* ! Can't figure out how to actually change the background */
 /* Media Queries */
 
 /*
@@ -607,5 +607,3 @@ Min-width: 1200px (large devices and wide screens)
         top: 15%;
     }
 }
-
-

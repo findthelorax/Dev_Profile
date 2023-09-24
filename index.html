@@ -20,7 +20,8 @@
                         <a href="./index.html" class="navbar_link"> Home </a>
                     </li>
                     <li>
-                        <a href="#projects" class="navbar_link"> Projects </a>
+                        <!-- ! Unsure how to link to this section from a different page ie. when on the About page the Projects link does not work. I've read it involves javascript and that's currently beyond me. -->
+                        <a href="./index.html#projects" class="navbar_link"> Projects </a>
                     </li>
                     <li>
                         <a href="./about.html" class="navbar_link"> About </a>
@@ -153,9 +154,11 @@
     <!-- Jump to Top -->
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <!-- Copyright -->
+    <!-- Copyright 
+        ! I copied the javascript to get the current year.
+    -->
     <div class="copyright">
-        <footer> <p>&copy; <script>document.write(new Date().getFullYear())</script> Brett Ferrante</p></footer>
+        <footer> <p><span class="c_symbol"> &copy; </span><script>document.write(new Date().getFullYear())</script> Brett Ferrante</p></footer>
     </div>
 </body>
 </html>
