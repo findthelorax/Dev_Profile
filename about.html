@@ -10,25 +10,51 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="navbar_div">
-        <nav id="navbar">
-            <a href="./index.html" id="site_logo"><img src="/School/projects/icons/icon_3.png" alt=""></a>
-            <ul class="navbar_menu">
-                <li>
-                    <a href="./index.html" class="navbar_link"> Home </a>
-                </li>
-                <li>
-                    <a href="#projects" class="navbar_link"> Projects </a>
-                </li>
-                <li>
-                    <a href="./about.html" class="navbar_link"> About </a>
-                </li>
-                <li>
-                    <a href="#contact" class="navbar_link"> Contact </a>
-                </li>
+    <!-- NavBar -->
+    <nav id="navbar">
+        <div class="nav_social">
+            <a href="./index.html"><img src="/School/projects/icons/icon_3.png" alt=""></a>
+            <ul class="nav_social_icons">
+                <li><a href=""> <i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""> <i class="fa-brands fa-github"></i></a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+        <ul class="navbar_menu">
+            <li>
+                <a href="./index.html" class="navbar_link"> Home </a>
+            </li>
+            <li>
+                <a href="./index.html#projects" class="navbar_link"> Projects </a>
+            </li>
+            <li>
+                <a href="./about.html" class="navbar_link"> About </a>
+            </li>
+            <li>
+                <a href="#contact" class="navbar_link"> Contact </a>
+            </li>
+        </ul>
+    </nav>
+    
+        <div>
+            <button id="hamburger_menu">
+                <nav>
+                    <ul class="mobile_menu">
+                        <li>
+                            <a href="./index.html" class="navbar_link"> Home </a>
+                        </li>
+                        <li>
+                            <a href="./index.html#projects" class="navbar_link"> Projects </a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="navbar_link"> About </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="navbar_link"> Contact </a>
+                        </li>
+                    </ul>
+                </nav>
+            </button>
+        </div>
     <section>
         <!-- I was trying to target stats separately but don't think I got the syntax correct in css hence the " stats". -->
         <div class="about_grid">
