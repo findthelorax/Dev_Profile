@@ -46,8 +46,8 @@ a:any-link {
 html {
     font-family: "Fjalla One", Arial;
     font-weight: 200;
-    background: #074463;
-    background-image: url(/School/wallpapers/5166950.jpg);
+    background: linear-gradient(135deg, #FE5F55, #340068, black);
+    /* background-image: url(/School/wallpapers/5166950.jpg); */
     color: white;
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -67,8 +67,9 @@ section {
     top: 0;
     z-index: 666;
     min-height: 100px;
-    background: transparent;
+    /* background: transparent; */
     backdrop-filter: blur(8px);
+    background: #ffc8008e;
 }
 .nav_social img {
     filter: invert(1);
@@ -77,6 +78,9 @@ section {
     width: 100px;
     display: flex;
     float: left;
+    background: #01a0aa;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0px white;
 }
 .navbar_menu {
     float: right;
@@ -97,12 +101,12 @@ section {
 .navbar_menu a {
     padding: 10px;
     border-radius: 10px;
-    box-shadow: inset 15px 15px 29px #053249, inset -15px -15px 29px #095880;
+    box-shadow: inset 15px 15px 29px rgba(77, 38, 87, 0.2), inset -15px -15px 29px rgba(184, 92, 196, 0.2);
 }
 .navbar_menu a:hover {
     color: #FE5F55;
-    background: linear-gradient(145deg, #095880, #053249);
-    box-shadow:  10px 10px 20px #063a54, -10px -10px 20px #084e72;
+    background: linear-gradient(145deg, #de8aff91, #492e5391);
+    box-shadow:  10px 10px 20px #00000048, -10px -10px 20px #8f59a591;
 }
 .navbar_menu a:active {
     color: #ff00aa;
@@ -110,7 +114,6 @@ section {
 .nav_social {
     display: flex;
     float: left;
-    background: transparent;
 }
 .nav_social_icons {
     float: flex-start;
@@ -120,31 +123,32 @@ section {
     justify-content: center;
     font-size: 30px;
     padding-left: 20px;
+    z-index: 6;
 }
 .nav_social_icons a {
     margin: 0 15px;
     padding: 10px;
-    background: #074463;
-    border-radius: 30%;
-    border: solid .5px #00000015;
-    box-shadow:  5px 5px 10px #063a54,
-    -5px -5px 10px #084e72;
+    border-radius: 10%;
+}
+.nav_social_icons .linkdn {
+    background: #20A4F3;
+    box-shadow: 5px 5px 0px black;
+}
+.nav_social_icons .github {
+    background: #340068;
+    box-shadow: 5px 5px 0px black;
 }
 
-.nav_social_icons .fa-linkedin:hover {
-    color: #0073a4;
+.nav_social_icons li:hover {
+    transform: scale(1.2  );
+    transition: .6s ease;
 }
+
 .nav_social_icons .fa-linkedin:active {
     color: #ff00aa;
 }
-.nav_social_icons .fa-github:hover {
-    color: #5a32a3;
-}
 .nav_social_icons .fa-github:active {
     color: #ff00aa;
-}
-.nav_social_icons .fa-envelope:hover {
-    color: #3ba332;
 }
 .nav_social_icons .fa-envelope:active {
     color: #ff00aa;
@@ -219,13 +223,39 @@ section {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 20px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 80px 20px;
+    box-shadow: 20px 20px 0px black;
 }
 .skills_grid_item h3 {
     padding: 0 0 15px 0;
     text-transform: uppercase;
 }
+.skills_grid_item:nth-child(1) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #60992D, 20px 20px 0px black ;
+}
+.skills_grid_item:nth-child(2) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #FE5F55, 20px 20px 0px black;
+}
+.skills_grid_item:nth-child(3) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #20A4F3, 20px 20px 0px black;
+}
+.skills_grid_item:nth-child(4) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #966B9D, 20px 20px 0px black;
+}
+.skills_grid_item:nth-child(5) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #FFC600, 20px 20px 0px black;
+}
+.skills_grid_item:nth-child(6) {
+    background: #000000ad;
+    box-shadow: inset 20px -30px 0px #340068, 20px 20px 0px black;
+    
+}
+
 
 /* Works Styling */
 .projects_grid {
@@ -271,8 +301,8 @@ section {
     transform: rotate(5deg);
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 15px 15px 20px #053249, -15px -15px 20px #095880;
+    background-color: #fe605580;
+    box-shadow: 20px 20px 0px #000000cc;
     backdrop-filter: blur(5px);
 }
 #about_pic {
@@ -294,7 +324,7 @@ section {
     width: 50px;
 }
 .about_grid_items {
-    color: #2e94e7;
+    color: #FFC600;
     text-shadow: 2px 2px 2px black;
 }
 .about_grid_items span {
@@ -330,19 +360,21 @@ section {
 #contact {
     letter-spacing: 2px;
     text-align: center;
-    border: solid .5px #063a54;
-    border-radius: 13px;
-    box-shadow: 0px 15px 20px #053249, 15px 0px 20px #053249, -15px -15px 20px #095880;
+    text-shadow: 3px 3px 0px black;
     max-width: 666px;
     margin: 0 auto 200px auto;
     padding: 20px 0 0 0;
     position: relative;
     font-family: "JosefinSans";
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.1);
+    background: #fe605580;
+    border: solid .5px #000000ad;
+    border-radius: 100px 15px;
+    box-shadow: 15px 15px 0px #000000ad; 
 }
 .underline {
     border-bottom: solid 2px pink;
+    box-shadow: 2px 2px 0px black;
     margin: .5rem auto;
     width: 120px;
 }
@@ -368,26 +400,26 @@ form {
 
 /* Submit Email Button */
 #contact_button {
-    border-radius: 13px;
+    border-radius: 15px 40px;
     border: solid .5px #00000028;
-    background: #074463;
-    box-shadow:  0px 15px 20px #053249, 15px 0px 20px #053249, -10px -10px 20px #095880;
+    background: #FFC600;
     color: #FE5F55;
+    box-shadow: 10px 10px 0px black;
     cursor: pointer;
     display: inline-block;
     font-family: "JosefinSans";
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 1000;
     padding: 20px 35px;
     margin: 20px 0px;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 #contact_button:hover {
     background: #074463;
-    color: #dfbd27;
+    color: #FFC600;
     border: solid .5px #0000005d;
     transform: translateY(-0.25em);
-    box-shadow: inset 15px 0 20px #063a54, inset -15px 0px 20px #052f44;
+    box-shadow: inset 15px 0 20px #063a54, inset -15px 0px 20px #052f44, 10px 10px 0px black;
 }
 #contact_button:active {
 }
@@ -422,11 +454,8 @@ textarea {
 
 /* Top Button */
 .top {
-    place-self:end;
-    text-decoration: none;
     padding: 10px;
-    color: #fff;
-    box-shadow: 5px 5px 10px #053249, -5px -5px 10px #095880;
+    box-shadow: 5px 5px 10px #3d008d8e, -5px -5px 10px #6725a5;
     border: solid .5px #00000015;
     border-radius: 100px;
     font-size: 20px;
@@ -434,34 +463,32 @@ textarea {
     bottom: 20px;
     left: 30px;
     margin-top: 150vh;
+    z-index: 2;
 }
 .top:hover {
     border: solid .5px #00000015;
-    box-shadow: inset 15px 15px 29px #053249, inset -15px -15px 29px #095880;
+    box-shadow: inset 15px 15px 29px #3d008d8e, inset -15px -15px 29px #6725a5;
 }
-
 /* Footer Social Media Styling */
 #footer {
     position: absolute;
     width: 100%;
+    background: #FFC600;
+    border-top: solid 8px black;
+    border-bottom: solid 2px black;
+    border-radius: 30% 30px;
+    z-index: -2;
+    overflow: hidden;
 }
 .footer_social_icons {
     float: right;
     margin: 20px;
 }
-.social_header {
-    margin-left: 50px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: .25rem;
-    color: #000;
-    text-shadow:
-        0 0 7px #b8fdff,
-        0 0 10px #ff00aa,
-        0 0 21px #ff00aa,
-        0 0 42px rgb(205, 245, 255);
-}
+.nav_social_icons .mail {
+    background: #FE5F55;
+    box-shadow: 5px 5px 0px black;
 
+}
 /* Copyright */
 .copyright {
     width: 100%;
@@ -471,7 +498,6 @@ textarea {
     text-align: center;
     text-transform: uppercase;
     bottom: 0px;
-    z-index: -1;
 }
 .c_symbol {
     font-size: 25px;
@@ -507,8 +533,7 @@ Min-width: 1200px (large devices and wide screens)
     }
 }
 
-
-
+/* ! Watched a video for this. I need to go over key frames and animations again, currently working on understanding SVGs... */
 .hire_btn {
     display: block;
     position: relative;
@@ -561,7 +586,7 @@ position: relative;
 display: block;
 padding: 1rem 1.5rem;
 font-size: 2.3rem;
-background: #000;
+background: #000000;
 border-radius: 20px;
 height: 100%;
 text-align: center;
