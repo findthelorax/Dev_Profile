@@ -8,54 +8,45 @@
     <title>Brett's Web Dev Portfolio</title>
 </head>
 <body>
-    <header>
-    </header>
 
     <!-- NavBar -->
-    <nav id="navbar">
-        <div class="nav_social">
-            <a href="./index.html"><img src="/School/icons/icon_3.png" alt="astratto_logo"></a>
-            <ul class="nav_social_icons">
-                <li><a href="" class="linkdn"> <i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="" class="github"> <i class="fa-brands fa-github"></i></a></li>
+        <nav id="navbar">
+            <div class="nav_social">
+                <a href="./index.html"><img src="/School/icons/icon_3.png" alt="astratto_logo"></a>
+                <ul class="nav_social_icons">
+                    <li><a href="" class="linkdn"> <i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="" class="github"> <i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+
+            
+            <input id="menu_input" type="checkbox" />
+            <label class='menu_label' for="menu_input">
+            <div class='menu_div'>
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="20" rx="8"></rect>
+                    <rect y="30" width="100" height="20" rx="8"></rect>
+                    <rect y="60" width="100" height="20" rx="8"></rect>
+                </svg>
+            </div>
+            </label>
+            
+
+            <ul class="navbar_menu">
+                <li>
+                    <a href="./index.html" class="navbar_link"> Home </a>
+                </li>
+                <li>
+                    <a href="./index.html#projects" class="navbar_link"> Projects </a>
+                </li>
+                <li>
+                    <a href="./about.html" class="navbar_link"> About </a>
+                </li>
+                <li>
+                    <a href="#contact" class="navbar_link"> Contact </a>
+                </li>
             </ul>
-        </div>
-        <ul class="navbar_menu">
-            <li>
-                <a href="./index.html" class="navbar_link"> Home </a>
-            </li>
-            <li>
-                <a href="./index.html#projects" class="navbar_link"> Projects </a>
-            </li>
-            <li>
-                <a href="./about.html" class="navbar_link"> About </a>
-            </li>
-            <li>
-                <a href="#contact" class="navbar_link"> Contact </a>
-            </li>
-        </ul>
-    </nav>
-    
-        <div>
-            <button id="hamburger_menu">
-                <nav>
-                    <ul class="mobile_menu">
-                        <li>
-                            <a href="./index.html" class="navbar_link"> Home </a>
-                        </li>
-                        <li>
-                            <a href="./index.html#projects" class="navbar_link"> Projects </a>
-                        </li>
-                        <li>
-                            <a href="./about.html" class="navbar_link"> About </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="navbar_link"> Contact </a>
-                        </li>
-                    </ul>
-                </nav>
-            </button>
-        </div>
+        </nav>
 
     <!-- Homepage Section -->
     <section id="home">
@@ -65,24 +56,12 @@
             <p>I love diving headfirst into new problems. I enjoy solving puzzles, cooking, snowboarding, rock climbing and hanging out with my son.</p>
         </div>
 
-        <div class="home_content">
-            <img id="profile_img" src="./profile_pic.png" alt="Handsome Redhead">
+        <div class="home_img">
+            <img id="profile_img" src="/School/pictures/pic_4.png" alt="Handsome Redhead">
+            <a class="hire_btn"><span>Hire Me</span></a>
         </div>
 
     </section>
-
-
-    <!-- ! Hire Me Section -->
-    <section id="hire_me_sec">
-        <a class="hire_btn"><span>Hire Me</span></a>
-    </section>
-
-    <!-- ! Have Fun Section
-        ! Create RPG character screen - grid
-    ! -->
-    <div class="fun">
-
-    </div>
 
     <!-- Skills Section -->
     <div class="skills_header">
@@ -154,7 +133,7 @@
     <!-- ! Link to Accounts -->
     <footer id="footer">
         <div class="copyright">
-            <p><span class="c_symbol"> &copy; </span><script>document.write(new Date().getFullYear())</script><span> Brett Ferrante </span></p>
+            <p><span class="c_symbol">&nbsp; &copy; </span>&nbsp; &nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;&nbsp;<span> Brett Ferrante </span></p>
         </div>
         <div class="footer_social_icons">
             <ul class="nav_social_icons">
