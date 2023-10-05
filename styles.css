@@ -6,35 +6,27 @@ TODO: Link back home to contacts/projects from another page.
 
 @font-face { 
     font-family: "Fjalla One";  
-    src: url("/School/Fonts/FjallaOne.ttf") format("truetype");
+    src: url("./resources/FjallaOne.ttf") format("truetype");
 }
 @font-face {
     font-family: "Nabla";
-    src: url("/School/Fonts/Nabla.ttf") format("truetype");
-}
-@font-face {
-    font-family: "SpecialElite";
-    src: url("./Fonts/SpecialElite.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Harmond";
-    src: url("/School/Fonts/Harmond-SemiBoldCondensed.otf") format("truetype");
+    src: url("./resources/Nabla.ttf") format("truetype");
 }
 @font-face {
     font-family: "Nightly";
-    src: url("/School/Fonts/Nightydemo.otf") format("truetype");
+    src: url("./resources/Nightydemo.otf") format("truetype");
 }
 @font-face {
     font-family: "Rolie";
-    src: url("/School/Fonts/Rolie\ Twily.otf") format("truetype");
+    src: url("./resources/Rolie\ Twily.otf") format("truetype");
 }
 @font-face {
     font-family: "PressStart";
-    src: url("/School/Fonts/PressStart2P.ttf") format("truetype");
+    src: url("./resources/PressStart2P.ttf") format("truetype");
 }
 @font-face {
     font-family: "JosefinSans";
-    src: url("/School/Fonts/JosefinSans.ttf") format("truetype");
+    src: url("./resources/JosefinSans.ttf") format("truetype");
 }
 
 /* Base Styling */
