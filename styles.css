@@ -83,7 +83,7 @@ section {
     background: transparent;
     /* background: #FFC600; */
     backdrop-filter: blur(8px);
-    border: solid 10px black;
+    border: solid 8px black;
     padding-bottom: 20px;
     overflow: hidden;
     width: 100%;
@@ -223,8 +223,10 @@ section {
 }
 .home_content p {
     font-size: 2rem;
+    font-weight: 100;
     margin-bottom: 3rem;
     padding-right: 20%;
+    text-shadow: 2px 2px 0px black;
 }
 #profile_img{
     width: 400px;
