@@ -74,8 +74,8 @@ section {
     min-height: 120px;
     background: transparent;
     /* background: #FFC600; */
-    backdrop-filter: blur(8px);
-    border: solid 8px black;
+    backdrop-filter: blur(4px) hue-rotate(320deg);
+    border-bottom: solid 2px rgb(0, 0, 0);
     padding-bottom: 20px;
     overflow: hidden;
     width: 100%;
@@ -195,7 +195,7 @@ section {
     border-radius: 30px;
     padding: 25px;
     border: solid 2px black;
-    box-shadow: 15px 15px 0px #a767e5, 15px 15px 0px #a767e5, 30px 30px 0 black, inset 10px 10px 0px #FFC600;
+    box-shadow: 15px 15px 0px #a767e5, 30px 30px 0 black, inset 10px 10px 0px #FFC600;
 }
 .home_content h3:nth-of-type(1) {
     margin: 1.2rem 0;
@@ -317,6 +317,11 @@ section {
 .projects_grid_item h3 {
     padding: 0 0 15px 0;
     text-transform: uppercase;
+}
+.projects_grid img {
+    max-width: 325px;
+    max-height: 350px;
+    border-radius: 15px;
 }
 
 /* ! ABOUT SECTION - resizing issues*/
