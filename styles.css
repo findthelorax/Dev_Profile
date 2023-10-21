@@ -459,8 +459,6 @@ form {
     transform: translateY(-0.25em);
     box-shadow: inset 15px 0 20px #063a54, inset -15px 0px 20px #052f44, 10px 10px 0px #FFC600;
 }
-#contact_button:active {
-}
 
 input[type='text'], [type='email'], select, textarea {
     background: none;
